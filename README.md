@@ -7,6 +7,12 @@ Getting started is easy!
 
 First, barkingowl depends on python 2.7, you can download it [here](https://www.python.org/downloads/release/python-279/)
 
+Next install pip, a package manager for python by running the following command
+
+```
+python get-pip.py
+```
+
 A second dependency is RabbitMQ.  You can find information about installing RabbitMQ on your
 system here: [http://www.rabbitmq.com/download.html](http://www.rabbitmq.com/download.html)
 
