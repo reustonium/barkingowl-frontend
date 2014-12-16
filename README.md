@@ -5,7 +5,9 @@ A very lite frontend for the barkingowl document scraping system.
 
 Getting started is easy!
 
-First, to use barkingowl you need to install RabbitMQ.  You can find information about installing RabbitMQ on your
+First, barkingowl depends on python 2.7, you can download it [here](https://www.python.org/downloads/release/python-279/)
+
+A second dependency is RabbitMQ.  You can find information about installing RabbitMQ on your
 system here: [http://www.rabbitmq.com/download.html](http://www.rabbitmq.com/download.html)
 
 Next, execute these commands to launch the server:
