@@ -7,10 +7,10 @@ Getting started is easy!
 
 First, barkingowl depends on python 2.7, you can download it [here](https://www.python.org/downloads/release/python-279/)
 
-Next install pip, a package manager for python by running the following command
+Then use pip to install virtualenv, a virtual environment manager for creating isolated python development environments.
 
 ```
-python get-pip.py
+pip install virtualenv
 ```
 
 A second dependency is RabbitMQ.  You can find information about installing RabbitMQ on your
