@@ -1,1 +1,2 @@
 Barkingowl==0.3.1
+libmagic==1.0
