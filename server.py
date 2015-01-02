@@ -5,7 +5,8 @@ import urllib
 import datetime
 import threading
 
-from barking_owl import BusAccess
+#from barking_owl import BusAccess
+import barking_owl
 
 from flask import Flask
 from flask import render_template
