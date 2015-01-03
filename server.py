@@ -5,8 +5,7 @@ import urllib
 import datetime
 import threading
 
-#from barking_owl import BusAccess
-import barking_owl
+from barking_owl import BusAccess
 
 from flask import Flask
 from flask import render_template
@@ -148,6 +147,6 @@ if __name__ == "__main__":
     print "Web Application Starting ..."
     
     host = '0.0.0.0'
-    port = 8067
+    port = int(os.environ.get('PORT', 8067)
 
     fa = app.run(host=host, port=port)
