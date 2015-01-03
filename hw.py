@@ -6,4 +6,9 @@ def hello():
 	return "Hello World"
 
 if __name__ == "__main__":
-	app.run()
+    print "Web Application Starting ..."
+    
+    host = '0.0.0.0'
+    port = int(os.environ.get('PORT', 8067)
+
+    fa = app.run(host=host, port=port)
