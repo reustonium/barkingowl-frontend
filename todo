@@ -1,0 +1,6 @@
+todo
+
+change barkingowl connections
+pika.connection.ConnectionParameter to pika.connection.URLParameters
+
+update server.py to use the heroku config for rabbitMQ

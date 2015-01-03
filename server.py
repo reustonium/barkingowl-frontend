@@ -20,7 +20,7 @@ app.template_folder = "web"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 
-bus_access = BusAccess( my_id = str(uuid.uuid4()) )
+bus_access = BusAccess( my_id = str(uuid.uuid4()), address="localhost" )
 
 dispatched_urls = []
 

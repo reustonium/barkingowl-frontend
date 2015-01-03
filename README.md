@@ -35,13 +35,17 @@ You will see a single, simple page.  On this page there are two main functions: 
 
 
 ### Deploy to Heroku
+Since this deployment requires a heroku addon (RabbitMQ) you will have to provide credit card information.  
+RabbitMQ has a free tier, so although you must provide payment information you can use the free tier.
 
 1. Sign up for a free [Heroku](https://heroku.com) account
 2. Download the [Heroku Toolbar](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) for your OS
 3. From git bash login to heroku `heroku login`
 4. Create an app on the heroku platform `heroku create`
-5. Deploy BarkingOwl Frontend `git push heroku master`
+5. Verify your payment information [here](https://heroku.com/verify)
+6. Add the RabbitMQ addon to your app `heroku addons:add rabbitmq-bigwig`
+7. Deploy BarkingOwl Frontend `git push heroku master`
 This process pushes this codebase to heroku and runs the deployment process, this can take several minutes.
-6. Open your deployment `heroku open`
+8. Open your deployment `heroku open`
 
 For more information head over to the [wiki](https://github.com/thequbit/barkingowl-frontend/wiki)
