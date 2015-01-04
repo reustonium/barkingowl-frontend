@@ -5,6 +5,7 @@ import urllib
 import datetime
 import threading
 import settings
+import pika
 
 from barking_owl import BusAccess
 
@@ -21,6 +22,7 @@ app.template_folder = "web"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 
+# TODO: this is kinda grimy, would prefer one constructor independent of environ.
 if settings.RABBIT_URL == 'localhost':
     bus_access = BusAccess(
         uid = str(uuid.uuid4()), 
@@ -28,7 +30,8 @@ if settings.RABBIT_URL == 'localhost':
 else:
     bus_access = BusAccess(
         uid = str(uuid.uuid4()),
-        url_parameters = settings.RABBIT_URL
+        url_parameters = pika.URLParameters(settings.RABBIT_URL),
+        debug = True
     )
 
 dispatched_urls = []
