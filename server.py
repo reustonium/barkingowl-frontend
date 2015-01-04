@@ -28,8 +28,7 @@ if settings.RABBIT_URL == 'localhost':
 else:
     bus_access = BusAccess(
         my_id = str(uuid.uuid4()),
-        url_parameters = barking_owl.URLParameters(
-            settings.RABBIT_URL)
+        url_parameters = settings.RABBIT_URL
     )
 
 dispatched_urls = []
