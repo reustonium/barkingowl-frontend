@@ -31,7 +31,7 @@ else:
     bus_access = BusAccess(
         uid = str(uuid.uuid4()),
         url_parameters = pika.URLParameters(settings.RABBIT_URL),
-        debug = True
+        DEBUG = True
     )
 
 dispatched_urls = []
