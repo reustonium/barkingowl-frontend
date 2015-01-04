@@ -1,0 +1,3 @@
+target_url,title,description,max_link_level,doc_type
+"http://timduffy.me/","TimDuffy.me","Tim Duffy's personal website",3,"application/pdf"
+"http://mysecondwebsite.com/","A Website","A site that probably has documents on it",2,"application/pdf"
