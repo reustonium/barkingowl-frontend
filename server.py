@@ -23,11 +23,11 @@ app.debug = True
 
 if settings.RABBIT_URL == 'localhost':
     bus_access = BusAccess(
-        my_id = str(uuid.uuid4()), 
+        uid = str(uuid.uuid4()), 
         address="localhost" )
 else:
     bus_access = BusAccess(
-        my_id = str(uuid.uuid4()),
+        uid = str(uuid.uuid4()),
         url_parameters = settings.RABBIT_URL
     )
 
