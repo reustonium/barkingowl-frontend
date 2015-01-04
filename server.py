@@ -4,6 +4,7 @@ import uuid
 import urllib
 import datetime
 import threading
+import settings
 
 from barking_owl import BusAccess
 
@@ -20,7 +21,16 @@ app.template_folder = "web"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 
-bus_access = BusAccess( my_id = str(uuid.uuid4()), address="localhost" )
+if settings.RABBIT_URL == 'localhost':
+    bus_access = BusAccess(
+        my_id = str(uuid.uuid4()), 
+        address="localhost" )
+else:
+    bus_access = BusAccess(
+        my_id = str(uuid.uuid4()),
+        url_parameters = barking_owl.URLParameters(
+            settings.RABBIT_URL)
+    )
 
 dispatched_urls = []
 
